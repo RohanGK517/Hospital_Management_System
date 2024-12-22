@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Invoice Generator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .bodyClass {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 30px;
+            font-size: 17px;
+            padding: 8px;
+        }
+
+        .InvoiceContainer {
+            /* width: 850px;
+    display: flex;
+    justify-content: center; */
+            background-color: #e9e3eb;
+            padding: 15px 20px;
+            border: 20px ridge rgba(240, 228, 227, 0.795);
+            border-radius: 4px;
+        }
+
+        .info input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .bodyClass fieldset {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-left: 15px;
+        }
+
+        .checkup {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .Invoiceheading {
+            color: rgba(39, 37, 37, 0.856);
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+
+        .checkup input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: -5px;
+
+        }
+
+        .checkup span {
+            margin-top: -5px;
+            font-size: 25px;
+        }
+
+        .invoiceGenerate input[type="submit"] {
+            background-color: rgba(103, 235, 141, 0.877);
+            color: black;
+            font-size: 25px;
+            padding: 10px;
+            margin-left: 38%;
+            border-radius: 20px;
+            width: 20%;
+
+        }
+
+        .invoiceGenerate input[type="submit"]:hover {
+            background-color: dodgerblue;
+        }
+
+
+
+        ::placeholder {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body class="bodyClass">
+    <div class="InvoiceContainer">
+        <form action="/generated/" method="POST"> {% csrf_token %}
+            <h1 class="Invoiceheading">Patient Invoice Generator</h1>
+            <div class="info">
+                <input type="text" name="name" placeholder="F u l l  N a m e" required></p>
+                <input type="text" name="hospitalname" placeholder="H o s p i t a l   N a m e" required></p>
+            </div>
+
+            <fieldset>
+                <div class="checkup">
+                    <input type='checkbox' name="blood" value="True">Blood Test &nbsp;&nbsp;&nbsp;
+                    <input type='checkbox' name="general" value="True">General Checkup &nbsp;&nbsp;&nbsp;
+                    <input type='checkbox' name="xray" value="True">Chest X-ray &nbsp;&nbsp;&nbsp;
+                    <input type='checkbox' name="ct" value="True">CT scan  &nbsp;&nbsp;&nbsp;
+                    <input type='checkbox' name="dental" value="True">Dental treatment &nbsp;&nbsp;&nbsp;
+                    <input type='checkbox' name="et" value="True">E&T Treatment &nbsp;&nbsp;&nbsp;
+                    <input type='checkbox' name="full" value="True">Full Checkup&nbsp;&nbsp;&nbsp;
+
+                    <span>&#8377;</span> &nbsp;&nbsp; <input type="number" name="medicine" id="medicine"
+                        class="MedicineAmount" placeholder="Medicine Amount">
+                </div>
+            </fieldset>
+            <br><br>
+            <div class="invoiceGenerate">
+                <a href="">
+                    <input type="submit" value="Generate Invoice">
+                </a>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

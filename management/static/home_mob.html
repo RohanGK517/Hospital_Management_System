@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link rel="stylesheet" href='style.css'> -->
+    <title>Home</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px 50px;
+    position: relative;
+    background-color: rgb(18, 7, 37);
+}
+.logo{
+    cursor:pointer;
+    color: #e4baba;
+}
+.logo:hover{
+    background: #000;
+    color:white;
+    border:2px solid #efefef;
+    border-radius: 30px;
+    padding : 9px;
+
+}
+.nav-area{
+   list-style: none; 
+}
+.nav-area li{
+    display: inline-block;
+    padding:0 15px;
+    text-transform: uppercase;
+}
+.nav-area li a{
+    transition: .3s;
+    color:#fff;
+    text-decoration: none;
+
+}
+.nav-area li a:hover{
+    color:#d22938;
+}
+.auth{
+    float:right;
+   
+}
+.btn{
+    cursor:pointer;
+    color:#fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin:10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 5px solid #ffc400ec;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 24px;
+    transition:0.25px;
+    cursor:pointer; 
+    text-decoration: none;
+}
+.btn:hover{
+    background:#ffc400ec;
+  
+}
+#i1{
+    float:right;
+}
+
+/*Animation box*/
+
+ .feature-box{
+     width:80%;
+     margin:auto;
+     display:flex;
+     flex-wrap: wrap;
+     align-items: initial;
+     text-align: center;
+ }
+ .features{
+     flex-basis: 20%;
+ }
+ .feature-img{
+     flex-basis:50%;
+     margin:auto;
+ }
+ .feature-img img{
+     margin-left:  250px;
+     width: 75%;
+     border-radius: 10px;
+ }
+ .features h1{
+      border-bottom: 5px solid #9f7be6;
+     text-align:  left;
+     margin-bottom: 10px;
+     font-weight: 100; 
+
+ }
+ .feature-text p{
+     font-size: large;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     padding: -10px 20px;
+     text-align: initial;
+ }
+
+ /* for appointment*/
+ .centered {
+    position:absolute;
+    top: 70%;
+    left: 25%;
+    transform: translate(-35%, 50%);
+  }
+.glow {
+    font-size: 40px;
+    color: rgb(141, 91, 16);
+    text-align: center;
+    color: #eff0cd;
+    text-shadow:
+        0 0 7px rgb(230, 146, 160),
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(230, 146, 160),
+        0 0 82px rgb(230, 146, 160),
+        0 0 92px rgb(236, 116, 136),
+        0 0 102px rgb(138, 164, 235),
+        0 0 151px rgb(226, 182, 189);
+        
+}
+.take-appointment{
+    position: absolute;
+    top: 120%;
+    left: 20%;
+    transform: translate(0%, 50%);  
+}
+.take-appointment h2{
+    position: absolute;
+    top: 20%;
+    left: -65%;
+    color: #e41b0d;
+   font-family:   'Times New Roman' ;
+    font-size: 28px;
+    letter-spacing: 0.5px; 
+}
+
+
+.appointment{
+ 
+  border: none;
+  background-color: none;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;
+  
+}
+
+
+/*for footer */
+
+
+.footer{
+    position:relative;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: rgb(150, 138, 171);    
+}
+.inner_footer{
+    display: block;
+    margin: 0 auto ;
+    width: 1000px;
+    height: 100%;
+}
+.inner_footer .logo_container{
+    width: 40%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+.inner_footer .logo_container img{
+ border-radius: 50%;
+ width:10rem;
+
+}
+.inner_footer .footer_third{
+    width: calc(22%-15px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+
+}
+.inner_footer .footer_third h2{
+    color: wheat;
+    font-size: 29px;
+    margin-bottom: 18px;
+    margin-right: 25px;
+
+}
+.inner_footer .footer_third a{
+    color: wheat;
+    margin-right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.inner_footer .footer_third span{
+    color: aliceblue;
+    font-size: 15px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">logo</h1>
+        <nav>
+            <ul class="nav-area">
+                <li> <a id="1" href="#">Home</a></li> 
+                <!-- <li><a id="2" href="#">Services</a></li> -->
+                <li> <a id="3" href="#">About</a></li>
+                <li> <a id="4" href="#">Contact Us</a></li>
+                <!-- <li> <a id="4" href="#">login</a></li> -->
+            </ul>
+        </nav>
+        <div class="auth">
+            <a class="btn" href="/login">Login</a>
+            <a class="btn" href="/signup">Signup</a>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="content">
+        <!-- <h1>HII</h1> -->
+        <!-- {% block contents %}{% endblock %} -->
+
+        <div class="first-one">
+           
+        </div>
+
+     <div class="feature-box">
+         <div class="features">
+             <h1> About Us  </h1>
+
+         <div class="feature-text">
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, magnam incidunt iusto consequuntur, dicta ipsam ad dolorum deleniti facilis quia saepe vel voluptatum eaque veritatis quisquam, asperiores laboriosam itaque ut.</p>
+         </div>
+         </div>
+         <div class="feature-img">
+             <img src="second_img.jpg" alt="doctor-img">
+         </div>
+     </div>
+      <!-- <br>
+      <br>
+      <br> -->
+<div >
+       <img src="third_img.jpg" alt="appointment-image" width="100%" height="600" style="margin-bottom: 50px;">
+       
+       <div class="centered"><h6 class="display-3 glow">Care and dedication is the driving force behind our work.</h6>
+        <br><br>
+        <h6 class="display-3 glow">Technologies helps us a lot.</h6>
+        <br>
+       </div>
+
+       <div class="take-appointment">
+        <h2 >Emergency ?</h2>
+        <p class="btn">
+          <a class="appointment" href="#" role="button">Take Appointment</a>
+        </p>
+        </div>
+    
+</div>
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </div>
+    <div class="footer">
+        <div class="inner_footer">
+            <div class="logo_container">
+                <!-- <img src="icon.png" alt="CARE-TAKERS"> -->
+                <img src="icon.png" alt="home" />
+            </div>
+            <div class="footer_third">
+                <h2>Need Help?</h2>
+                <a href="#">How to Register...</a>
+                <br>
+                <a href="#">Terms &amp Conditions</a>
+                <br>
+                <a href="#">Privacy Policy</a>
+
+            </div>
+            <div class="footer_third">
+                <h2>Contact Us</h2>
+                
+                <a href="#"><i  class="fa">&#xf0e0;</i> E-mail</a>
+                <br>
+                <a href="#"><i class="fa">&#xf095;</i> Mobile</a>
+                <br>
+                <a href="#"><i class="fa fa-whatsapp "></i> Whatsapp</a>
+            </div>
+            <div class="footer_third">
+                <h2>Follow Us</h2>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <span>caretakers.com © <br>
+                All rights<br> reserved</span>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

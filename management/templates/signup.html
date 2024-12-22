@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+{% block contents %}
+    <div class="bg">
+    <div class="outer">
+        <div class="inner1">
+            <h1 class="title">For Admin</h1>
+            <p>Hospital management who wants to connect with us and help people to know about their hospital through our platform</p>
+            <br><br><br><br>
+            <a class="connect1" href="/signup_admin" target="_self">Sign-UP</a>
+            <p>Already have an account?<a class="connect" href="/login" target="_self">login</a></p>
+        </div>
+        <div class="inner2">
+            <h1 class="title">For Doctors</h1>
+            <p>Doctors who wants to work with our hospitals and contribute to the sociecity</p>
+            <br><br><br><br><br>
+            <a class="connect1" href="/signup_doctor" target="_self">Sign-UP</a>
+            <p>Already have an account?<a class="connect" href="/login" target="_self">login</a></p>
+        </div>
+        <div class="inner3">
+            <h1 class="title">For Users</h1>
+            <p>Users who wants to get information or admittance to our hospitals</p>
+            <br><br><br><br><br>
+            <a class="connect1" href="/signup_patient" target="_self">Sign-UP</a>
+            <p>Already have an account?<a class="connect" href="/login" target="_self">login</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

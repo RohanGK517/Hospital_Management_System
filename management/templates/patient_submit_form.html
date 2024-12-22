@@ -1,0 +1,56 @@
+{% extends "base.html"%}
+{% block contents %}
+<div class="admit_container">
+    <span>
+        <form action="." method='POST'>{%csrf_token%}
+            <h1 class="heading">Online Patient admission Form</h1>
+            <fieldset>
+                <legend>Patient Information </legend>
+                <p>
+                    <input class="admit_fname mm" type="text" name="fname" placeholder="First Name" required>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="admit_lname" type="text" name="lname" placeholder="Last Name" required>
+                </p>
+                <p>
+                    <input class="admit_dob mm" type="date" name="dob" id="dob" required placeholder="Birth Date">
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&emsp;&emsp;&emsp;
+                    <select class="admit_gender" name="gender">
+                        <option value="">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Other</option>
+                    </select>
+                </p>
+                <p>
+                    &emsp; &nbsp;&nbsp;
+                    <input class="admit_email mm" type="email" name="email" id="email" placeholder="Email ID" required>
+                    &emsp;&emsp;&emsp;&emsp;
+                    <input class="admit_address" type="text" name="address1" id="address1" placeholder="Permanent Address" required>
+                </p>
+                <p> &emsp;
+                    <input class="admit_phn mm" type="number" name="phn" id="phn" placeholder="Phone number">
+                    &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                    <input class="admit_Illness" type="text" name="Illness" id="address2" placeholder="Illness">
+
+                </p>
+                <p> &emsp;&emsp;&emsp;&nbsp;
+                    <input class="admit_city mm" type="text" name="city name" id="city name" placeholder="Enter your city name">
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                    <input class="admit_pincode" type="number" name="pincode" id="pincode" placeholder=" Pincode " required>
+                </p>
+                <p>&emsp;&emsp;&emsp;&nbsp;
+                    <select class="admit_doctor mm" name="select_doctor">
+                        <option value="">Select your Doctor</option>
+                        {% for h in doc %}
+                        <option name="checks[]" value="{{h.doctor_name}}">{{h.doctor_name}} - {{h.qualification}}</option>
+                        {% endfor %}
+                    </select>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                    <input class="admit_password" type="password" name="Password" id="Password" placeholder=" Password " required>
+                </p>               
+                <input type="submit" class="admit_submit" value="Admit">
+            </fieldset>
+        </form>
+    </span>
+</div>
+{% endblock %}

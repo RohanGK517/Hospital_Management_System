@@ -1,0 +1,31 @@
+{% extends "base.html"%}
+
+
+{% block contents %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col">Doctor ID</th>
+        <th class="col">Doctor Name</th>
+        <th class="col">Qualification</th>
+        <th class="col">Hospital Name</th>
+        {% if not user.type_user is admins %}
+        <th class="col">Approve dismissal</th>
+        {%endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for h in doc %}
+      <tr>
+        <td class="row">{{forloop.counter}}</td>
+        <td><a href="{{ h.id }}/" style='text-decoration: none;'>{{h.doctor_name}}</a></td>
+        <td>{{h.qualification}}</td>
+        <td>{{h.hospital_name}}</td>
+        {% if not user.type_user is admins %}
+        <td><a href="{{ h.id }}/delete" style='text-decoration: none;'><input type="submit" value="Dismiss"></a></td>
+        {%endif %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

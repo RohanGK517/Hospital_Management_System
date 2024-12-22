@@ -1,0 +1,38 @@
+{% extends "base.html"%}
+
+
+{% block contents %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Hey!</strong> your form is : {{success}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div><br><br>
+    <div class="signup-box">
+        <form action="." method="post">{%csrf_token%}
+        <h1>Admin Registration</h1>
+        <div class="textbox">
+            <input type="text" name="hospitalname" id="hospitalname" placeholder="Hospital Name" required>
+        </div>
+        <div class="textbox">
+            <input type="text" name="adminname" id="adminname" placeholder="Admin Name" required>
+        </div>
+        <div class="textbox">
+            <input type="text" name="address" id="address" placeholder="Address" required>
+        </div>
+        <div class="textbox">
+            <input type="tel" name="phone" id="phoneNumber" placeholder="Mobile No." required>
+        </div>
+        <div class="textbox">
+            <input type="email" name="email" id="email" placeholder="Email ID" required>
+        </div>
+        <div class="textbox">
+            <input type="password" name="Password" id="Password" placeholder="Password" required>
+        </div>
+        <div class="textbox">
+            <input type="password" name="ConfirmPassword" id="confirm_Password" placeholder="Confirm Password" required>
+        </div>
+   
+       
+        <input class="btn1" type="submit" name="" value="Submit">
+        </form>
+    </div>   
+{% endblock %}

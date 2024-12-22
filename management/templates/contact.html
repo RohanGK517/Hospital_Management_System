@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+
+
+{% block contents %}
+<div class="contact_container">
+    <form>
+      <br><br>
+      <label for="Name">First Name</label>
+      <input type="text" id="Name" name="Name" placeholder="Your name..">
+  
+       <br><br>
+      <label for="e-mail">E-mail</label>
+      <input id="e-mail" name="e-mail" placeholder="Email">
+        
+  
+  <br><br>
+      <label for="subject">Feedback</label>
+      <textarea id="subject" name="Feedback" placeholder="Write something.." style="height:200px" placeholder="feedback"></textarea>
+  <br>
+      <input type="submit" value="Submit" style="width:50px">
+  
+    </form>
+  </div>
+  {% endblock %}

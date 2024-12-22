@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Profile</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="patient_log.css">
+
+</head>
+
+<body>
+  <main>
+    <div class="bs-example">
+      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#337AB7;">
+        <a href="/patient-dashboard" class="navbar-brand">HOSPITAL MANAGEMENT</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <div class="navbar-nav" style=" margin-left: 90%;">
+
+            <a href="/logout" class="nav-item nav-link">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br><br><br>
+    <table class="table">
+      <thead>
+        <tr class="bg-secondary">
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Patient Name</th>
+          <th scope="col">Illness</th>
+          <th scope="col">Doctor Name</th>
+          <th scope="col">Prescription</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">01-09-2021</th>
+          <td>14:01</td>
+          <td>Rajesh Sharma</td>
+          <td>Fever</td>
+          <td>Samuel Miller</td>
+          <td>Cifloxacin</td>
+        </tr>
+        <tr>
+          <th scope="row">01-09-2021</th>
+          <td>14:15</td>
+          <td>Raju Yadav</td>
+          <td>Acne</td>
+          <td>Jacob Thornton</td>
+          <td>AcneStar Soap</td>
+        </tr>
+        <tr>
+          <th scope="row">01-09-2021</th>
+          <td>14:30</td>
+          <td>Shivam Rao</td>
+          <td>Tonsillitis</td>
+          <td>Rajesh Verma</td>
+          <td>Acetaminophen or ibuprofen</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <footer>
+      <p>
+        <a id="ftr" href="https://facebook.com" class="fa fa-facebook"></a>
+        <a id="ftr" href="https://whatsapp.com" class="fa fa-whatsapp"></a>
+        <a id="ftr" href="https://instagram.com" class="fa fa-instagram"></a>
+        <a id="ftr" href="https://twitter.com" class="fa fa-twitter"></a>
+      </p>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+              <p>Made in India <br>
+                Copyright &copy; 2021 </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+</body>
+
+</html>

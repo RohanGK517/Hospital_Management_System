@@ -1,0 +1,796 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href='style.css'> -->
+    <title>Home</title>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+        *{
+          box-sizing: border-box;
+          margin:0;
+          padding:0;
+        }
+
+.c_image {
+  object-fit: cover;
+  height: 550px;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px 50px;
+    position: relative;
+    background-color: rgb(18, 7, 37);
+}
+.logo{
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    position: center;
+    border-radius: 50%;
+}
+.logo:hover{
+    background: #000;
+    color:white;
+    border:2px solid #efefef;
+    border-radius: 30px;
+    padding : 9px;
+
+}
+.nav-area{
+   list-style: none; 
+}
+.nav-area li{
+    display: inline-block;
+    padding:0 15px;
+    text-transform: uppercase;
+}
+.nav-area li a{
+    transition: .3s;
+    color:#fff;
+    text-decoration: none;
+
+}
+.nav-area li a:hover{
+    color:#d22938;
+}
+.auth{
+    float:right;
+   
+}
+.btn{
+    cursor:pointer;
+    color:#fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin:10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 5px solid #ffc400ec;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 24px;
+    transition:0.25px;
+    cursor:pointer; 
+    text-decoration: none;
+}
+.btn:hover{
+    background:#ffc400ec;
+  
+}
+#i1{
+    float:right;
+}
+
+/*Animation box*/
+
+ .feature-box{
+     width:80%;
+     margin:auto;
+     display:flex;
+     flex-wrap: wrap;
+     align-items: initial;
+     text-align: center;
+ }
+ .features{
+     flex-basis: 20%;
+ }
+ .feature-img{
+     flex-basis:50%;
+     margin:auto;
+ }
+ .feature-img img{
+     margin-left:  250px;
+     width: 75%;
+     border-radius: 10px;
+ }
+ .features h1{
+      border-bottom: 5px solid #9f7be6;
+     text-align:  left;
+     margin-bottom: 10px;
+     font-weight: 100; 
+
+ }
+ .feature-text p{
+     font-size: large;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     padding: -10px 20px;
+     text-align: initial;
+ }
+
+ /* for appointment*/
+ .centered {
+    position:absolute;
+    top: 180%;
+    left: 25%;
+    transform: translate(-35%, 50%);
+  }
+.glow {
+    font-size: 40px;
+    color: rgb(141, 91, 16);
+    text-align: center;
+    color: #eff0cd;
+    text-shadow:
+        0 0 7px rgb(230, 146, 160),
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(230, 146, 160),
+        0 0 82px rgb(230, 146, 160),
+        0 0 92px rgb(236, 116, 136),
+        0 0 102px rgb(138, 164, 235),
+        0 0 151px rgb(226, 182, 189);
+        
+}
+.take-appointment{
+    position: absolute;
+    top: 220%;
+    left: 20%;
+    transform: translate(0%, 50%);  
+}
+.take-appointment h2{
+    position: absolute;
+    top: 20%;
+    left: -65%;
+    color: #e41b0d;
+   font-family:   'Times New Roman' ;
+    font-size: 28px;
+    letter-spacing: 0.5px; 
+}
+
+
+.appointment{
+ 
+  border: none;
+  background-color: none;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;
+  
+}
+
+
+/*for footer */
+
+
+.footer{
+    position:relative;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: rgb(150, 138, 171);    
+}
+.inner_footer{
+    display: block;
+    margin: 0 auto ;
+    width: 1000px;
+    height: 100%;
+}
+.inner_footer .logo_container{
+    width: 40%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+.inner_footer .logo_container img{
+ border-radius: 50%;
+ width:10rem;
+
+}
+.inner_footer .footer_third{
+    width: calc(22%-15px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+
+}
+.inner_footer .footer_third h2{
+    color: wheat;
+    font-size: 29px;
+    margin-bottom: 18px;
+    margin-right: 25px;
+
+}
+.inner_footer .footer_third a{
+    color: wheat;
+    margin-right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.inner_footer .footer_third ul{
+   list-style: none;
+}
+.inner_footer .footer_third span{
+    color: aliceblue;
+    font-size: 15px;
+}
+
+
+.content {
+  background-color: #dbdbdb;
+}
+
+.comment-container{
+    background-color: #846ed4;
+    /* border: 5px solid#e4baba; */
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+    
+}
+.user-image img{
+    border-radius: 50%; 
+    
+}
+.comment-section h4{
+    transform: translate(3%, -40%);  
+    margin-left: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    letter-spacing: 1px;
+    font-weight:500;
+    color: white;
+    
+}
+
+.comment-section h4 p{
+    transform: translate(0%, 60%);
+    font-size: 18px;
+    font-family: serif,Times;
+    margin-top: 30px;
+}
+.commentator,
+.commentator-status{
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-control-prev-icon{
+    align-items: baseline;
+}
+
+.card {
+    cursor: pointer
+}
+
+.hd {
+    font-size: 25px;
+    font-weight: 550
+}
+
+.card.hover,
+.card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2)
+}
+
+.myimg {
+    width: 80px;
+    height: 90px;
+    margin-bottom: 35px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222)
+}
+
+.card-title {
+    font-weight: 600
+}
+
+button.focus,
+button:focus {
+    outline: 0;
+    box-shadow: none !important
+}
+
+.ft {
+    margin-top: 25px
+}
+
+.chk {
+    margin-bottom: 5px
+}
+
+.rck {
+    margin-top: 20px;
+    padding-bottom: 15px
+}
+
+
+
+.box {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.our-services {
+    margin-top: 75px;
+    padding-bottom: 30px;
+    padding: 0 60px;
+    min-height: 198px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 0 25px 0 rgba(20, 27, 202, .17)
+}
+
+.our-services .icon {
+    margin-bottom: -21px;
+    transform: translateY(-50%);
+    text-align: center
+}
+
+.our-services:hover h4,
+.our-services:hover p {
+    color: #fff
+}
+
+.speedup:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #fb0054 0%, #f55b2a 100%)
+}
+
+.settings:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #34b5bf 0%, #210c59 100%)
+}
+
+.privacy:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #3615e7 0%, #44a2f6 100%)
+}
+
+.backups:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #fc6a0e 0%, #fdb642 100%)
+}
+
+.ssl:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #8d40fb 0%, #5a57fb 100%)
+}
+
+.database:hover {
+    box-shadow: 0 0 25px 0 rgba(20, 27, 201, .05);
+    cursor: pointer;
+    background-image: linear-gradient(-45deg, #27b88d 0%, #22dd73 100%)
+}
+    </style>
+</head>
+<body>
+    <header>
+      <nav>
+        
+            <ul class="nav-area">
+              <img class="logo" src="{%static "logo.jpeg"  %}" alt="CT">
+                <li> <a id="1" href="/" style= "margin-left: 400px;">Home</a></li> 
+                <!-- <li><a id="2" href="#">Services</a></li> -->
+                <li> <a id="3" href="#about">About</a></li>
+                <li> <a id="4" href="#contact">Contact Us</a></li>
+                <!-- <li> <a id="4" href="#">login</a></li> -->
+            </ul>
+        </nav>
+        {% if user.is_authenticated %}
+        <!-- <a style='color:azure'>you are logged in as {{request.user}}</a>
+        <a href="/logout">Logout</a> -->
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0 ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Welcome {{reuest.user}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+              <!-- <li><a class="dropdown-item" href="">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </li>
+        </ul>
+        {% else %}
+        <div class="auth">
+            <a class="btn" href="/userlogin">Login</a>
+            <a class="btn" href="/signup">Signup</a>
+        </div>
+        {% endif %}
+    </header>
+    
+    <div class="content">
+        <!-- <h1>HII</h1> -->
+        <!-- {% block contents %}{% endblock %} -->
+         
+        <div class="first-one">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="{%static "first-one1.jpg" %}" class="d-block w-100 c_image" alt="first_pic">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="{%static "first-one2.jpg" %}" class="d-block w-100 c_image" alt="second_pic">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="{%static "first-one3.jpg" %}" class="d-block w-100 c_image" alt="third_pic">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+<br><br>
+     <div class="feature-box" id="about">
+         <div class="features">
+             <h1> About Us  </h1>
+
+         <div class="feature-text">
+         <p>A platform to enlighten the society and help them by providing a basic need i.e heathcare on their fingertips. By joining us we help patients to find suitable hospitals with their details and doctors to get into best hospitals and hospitals to let them show their potential.</p>
+         </div>
+         </div>
+         <div class="feature-img">
+             <!-- <img src="second_img.jpg" alt="doctor-img"> -->
+             <img src="{% static "second_img.jpg" %}" alt="docimage" />
+         </div>
+     </div>
+      <br><br><br><br>
+<div >
+       <img src="{%static "third_img.jpg"  %}" alt="appointment-image" width="100%" height="700" style="margin-bottom: 50px;">
+       
+       <div class="centered"><h6 class="display-3 glow">Care and dedication is the driving force behind our work.</h6>
+        <h6 class="display-3 glow">Technologies helps us a lot.</h6>
+       </div>
+
+       <div class="take-appointment">
+        <h2 >Emergency ?</h2>
+        <p class="btn">
+          <a class="appointment" href="/admit" role="button">Take Appointment</a>
+        </p>
+        </div>
+        <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
+          <div class="hd">Why People Believe in Us</div>
+          <p><small class="text-muted">We Always render more and better service than <br />expected of us, no matter what your case may be.</small></p>
+          <div class="row" style="justify-content: center">
+              <div class="card col-md-3 col-12">
+                  <div class="card-content">
+                      <div class="card-body"> <img class="myimg" src="{%static 'satyam4.jpg' %}" />
+                          <div class="shadow"></div>
+                          <div class="card-title">Trusted and Registred Caretakers</div>
+                          <div class="card-subtitle">
+                              <p> <small class="text-muted">We have a Total of <b>101+</b> Expert Caretakers.</small> </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card col-md-3 col-12 ml-2">
+                  <div class="card-content">
+                      <div class="card-body"> <img class="myimg" src="{%static 'satyam3.jpg' %}" />
+                          <div class="card-title">Healthy Patients</div>
+                          <div class="card-subtitle">
+                              <p> <small class="text-muted">We Have fixed successful appointments of over <b>250+</b> Patients</small> </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card col-md-3 col-12 ml-2">
+                  <div class="card-content">
+                      <div class="card-body"> <img class="myimg rck" src="{%static 'satyam2.jpg' %}" />
+                          <div class="card-title">Experienced Caretakers </div>
+                          <div class="card-subtitle">
+                              <p> <small class="text-muted">We have a great Experienced Caretakers with over <b>20+</b> years of experiance .</small> </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="ft">
+              <p class="chk"><small class="text-muted">Still not sure?</small></p>
+              <div class="btn btn-primary">Read All Testimonials</div>
+          </div>
+      </div>    
+
+      <div class="container-fluid mb-5">
+        <div class="text-center mt-5">
+            <h1>Our Services</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="our-services settings">
+                        <div class="icon"> <img src="{%static 'satyam1.jpg' %}"> </div>
+                        <h4>Reliable</h4>
+                        <p>We Arrange your appointment with guarentee.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="our-services speedup">
+                        <div class="icon"> <img src="https://i.imgur.com/KMbnpFF.png"> </div>
+                        <h4>Quick Booking</h4>
+                        <p>We will get you Diagnosed in no time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="our-services privacy">
+                        <div class="icon"> <img src="https://i.imgur.com/AgyneKA.png"> </div>
+                        <h4>Privacy</h4>
+                        <p>We keep your data safe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+        
+
+
+
+    
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <a href="/admins">Admins</a>
+    </div>
+    <div class="col-sm">
+      <a href="/doctors">Caretakers </a>
+    </div>
+    <div class="col-sm">
+      <a href="/patients">Patients</a>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="comment-container">
+  
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="user-image">
+            <img src="{%static 'cmnt2.jpg' %}" alt="user-image" width="50" />
+          </div>
+          <div class="comment-section">
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam earum corporis voluptatum suscipit minima
+              reprehenderit, quibusdam ipsam? Voluptates consequatur sequi
+              maxime ducimus fugit saepe incidunt quasi corrupti eveniet
+              mollitia? Dolores officia quas corporis culpa laudantium natus
+              odio commodi ex? Similique, unde culpa. Quasi possimus ipsum
+              consequatur sint quisquam quae neque.
+              <p class="commentator">
+                Ved Ranjan Kachchap
+                <br />
+                <span class="commentator-status"> Patient</span>
+              </p>
+            </h4>
+          </div>
+        </div>
+        {% for h in comm %}
+        <div class="carousel-item ">
+          <div class="user-image">
+            <img src="{%static 'cmnt1.png' %}" alt="user-image" width="50" />
+          </div>
+          <div class="comment-section">
+            <h4>
+              {{ h.comment }}
+              <p class="commentator">
+                {{h.user_name}}
+                <br />
+                <span class="commentator-status">Dental Patient</span>
+              </p>
+            </h4>
+          </div>
+        </div>
+        {% endfor %}
+        
+        
+        <!-- <div class="carousel-item">
+          <div class="user-image">
+            <img src="{%static "cmnt4.jpeg" %}" alt="user-image" width="50" />
+          </div>
+          <div class="comment-section">
+            <h4>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam earum corporis voluptatum suscipit minima
+              reprehenderit, quibusdam ipsam? Voluptates consequatur sequi
+              maxime ducimus fugit saepe incidunt quasi corrupti eveniet
+              mollitia? Dolores officia quas corporis culpa laudantium natus
+              odio commodi ex? Similique, unde culpa. Quasi possimus ipsum
+              consequatur sint quisquam quae neque.
+              <p class="commentator">
+                Nihal Agrawal
+                <br />
+                <span class="commentator-status">AIDS Patient</span>
+              </p>
+            </h4>
+          </div>
+        </div> -->
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleControls"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    
+  </div>
+  
+  <br><br>
+  <!-- <div>
+    <form>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Example label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Another label</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        </div>
+      </form>
+  </div> -->
+ <!-- Button trigger modal -->
+ <p>Your comment here</p>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Write something...
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Comment Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+            <form action="/comment" method="post">{%csrf_token%}
+            <label for="user_name">Your Name</label>
+          <input type="text" class="form-control" name="u_name" id="formGroupExampleInput" placeholder="Example input">
+            <label for="usercomments">Your Comments</label>
+            <input type="text" class="form-control" name="user_comment" id="formGroupExampleInput2" placeholder="Your valuable comments">
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+          </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <br><br>
+  
+  <br><br>
+<div class="footer" id="contact">
+    <div class="inner_footer">
+        <div class="logo_container">
+            <!-- <img src="icon.png" alt="CARE-TAKERS"> -->
+            <img src="{% static "icon.png" %}" alt="home" />
+        </div>
+        <div class="footer_third">
+            <h2>Need Help?</h2>
+            <a href="#">How to Register...</a>
+            <br>
+            <a href="#">Terms &amp Conditions</a>
+            <br>
+            <a href="#">Privacy Policy</a>
+
+        </div>
+        <div class="footer_third">
+            <h2 id="let_me_contact">Contact Us</h2>
+            
+            <a href="#"><i  class="fa">&#xf0e0;</i> E-mail</a>
+            <br>
+            <a href="#"><i class="fa">&#xf095;</i> Mobile</a>
+            <br>
+            <a href="#"><i class="fa fa-whatsapp "></i> Whatsapp</a>
+        </div>
+        <div class="footer_third">
+            <h2>Follow Us</h2>
+            <ul>
+            <li><a href="https://www.facebook.com/profile.php?id=100072909567727"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/we2021CareTaker"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/we20211caretakers/"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+            <span>caretakers.com © <br>
+            All rights<br> reserved</span>
+        </div>
+    </div>    
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  
+
+     -->
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <style>
+        .body-main {
+            background: #ffffff;
+            border-bottom: 15px solid #1E1F23;
+            border-top: 15px solid #1E1F23;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 40px 30px !important;
+            position: relative;
+            box-shadow: 0 1px 21px #808080;
+            font-size: 10px
+        }
+
+        .main thead {
+            background: #1E1F23;
+            color: #fff
+        }
+
+        .Invoiceimg {
+            height: 100px
+        }
+
+        .page-header {
+            text-align: center
+        }
+
+        .container01 h1 {
+            border: none;
+            font-weight: 400;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            margin-bottom: 35px;
+            /* border-radius: 45%; */
+
+        }
+
+        .first-row {
+            display: flex;
+        }
+
+        .owner {
+            width: 300px;
+            margin-right: 40px;
+        }
+
+        .input-field input {
+            width: 100%;
+            /* border:none; */
+            outline: none;
+            padding: 10px;
+        }
+
+        .second-row {
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        .third-row h3 {
+            font-size: 25px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .selection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -10px;
+        }
+
+        .selection select {
+            padding: 10px 20px;
+        }
+
+        .cards img {
+            width: 90px;
+        }
+
+        .fourth-row {
+            margin-top: 35px;
+            margin-left: 70%;
+        }
+
+        a {
+
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 15%;
+
+            font-size: 18px;
+            transition: 0.5s;
+        }
+
+        a:hover {
+            background-color: dodgerblue;
+        }
+
+        .col-md-12 {
+            margin-top: 40px;
+            font-size: 15px;
+        }
+
+
+        ::placeholder {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoiceContainer">
+        <div class="page-header">
+            <h1>Invoice Template </h1>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-md-offset-3 body-main">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-5"> <img class="Invoiceimg" alt="Invoce Template"
+                                    src="https://www.pinclipart.com/picdir/big/550-5501725_hospital-logo-hd-png-clipart.png" />
+                            </div>
+                            <div class="col-md-7 text-right">
+                                <h4 style="color: #F81D2D;"><strong>{{pat.hos_name}}</strong></h4>
+                                <p>{{pat.patient_name}}</p>
+                                <p>1800-234-124</p>
+                                <p>caretakers@gmail.com</p>
+                            </div>
+                        </div> <br />
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h2>INVOICE</h2>
+                                <h5>04854654101</h5>
+                            </div>
+                        </div> <br />
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h5>Description</h5>
+                                        </th>
+                                        <th>
+                                            <h5>Amount</h5>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    {% if pat.blood_test is True%}
+                                    <tr>
+                                        <td class="col-md-9">Blood Test</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 500
+                                        </td>
+                                    </tr>{%endif%}
+                                    {% if pat.general_checkup is True %}
+                                    <tr>
+                                        <td class="col-md-9">General Checkup</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 1000
+                                        </td>
+                                    </tr>{%endif%}
+                                   
+                                    {% if pat.chest_xray is True %}
+                                    <tr>
+                                        <td class="col-md-9">Chest X-ray</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 1500
+                                        </td>
+                                    </tr>{%endif%}
+                                   
+                                    {% if pat.ct_scan is True %}
+                                    <tr>
+                                        <td class="col-md-9">CT Scan</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 2000
+                                        </td>
+                                    </tr>{%endif%}
+                                   
+                                    {% if pat.dental_treatment is True %}
+                                    <tr>
+                                        <td class="col-md-9">Dental Treatment</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 2500
+                                        </td>
+                                    </tr>{%endif%}
+                                   
+                                    {% if pat.ET_Treatment is True %}
+                                    <tr>
+                                        <td class="col-md-9">E&T Treatment</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 3000
+                                        </td>
+                                    </tr>{%endif%}
+                                   
+                                    {% if pat.Full_checkup is True %}
+                                    <tr>
+                                        <td class="col-md-9">Full Checkup</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> 3500
+                                        </td>
+                                    </tr>
+                                   {%endif%}
+                                  
+
+                                    <tr>
+                                        <td class="col-md-9">Medicines</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> {{pat.med_cost}}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right">
+                                            <p> <strong>Total Amount: </strong> </p>
+                                            <p> <strong>Discount: 10% </strong> </p>
+                                            <p> <strong>Payable Amount: </strong> </p>
+                                        </td>
+                                        <td>
+                                            <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i>
+                                                    {{pat.cost}}</strong> </p>
+                                            <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i>  {{pat.discount_cost}}
+                                                </strong> </p>
+                                            <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i>
+                                                    {{pat.total_cost}}</strong> </p>
+                                        </td>
+                                    </tr>
+                                    <tr style="color: #F81D2D;">
+                                        <td class="text-right">
+                                            <h4><strong>Grand Total:</strong></h4>
+                                        </td>
+                                        <td class="text-left">
+                                            <h4><strong><i class="fas fa-rupee-sign" area-hidden="true"></i> {{pat.tal_cost}}
+                                                </strong></h4>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                        <div>
+
+                            <div class="container01">
+                                <h1><u>Payment Information</u></h1>
+                                <div class="first-row">
+                                    <div class="owner">
+                                        <div class="input-field">
+                                            <input type="text" placeholder="Account Holder Name">
+                                        </div>
+                                    </div>
+                                    <div class="cvv">
+
+                                        <div class="input-field">
+                                            <input type="password" placeholder="CVV">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="second-row">
+                                    <div class="card-number">
+
+                                        <div class="input-field">
+                                            <input type="number" placeholder="Card Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="third-row">
+                                    <h3>Expiry Date</h3>
+                                    <div class="selection">
+                                        <div class="date">
+                                            <select name="months" id="months">
+                                                <option value="Jan">Jan</option>
+                                                <option value="Feb">Feb</option>
+                                                <option value="Mar">Mar</option>
+                                                <option value="Apr">Apr</option>
+                                                <option value="May">May</option>
+                                                <option value="Jun">Jun</option>
+                                                <option value="Jul">Jul</option>
+                                                <option value="Aug">Aug</option>
+                                                <option value="Sep">Sep</option>
+                                                <option value="Oct">Oct</option>
+                                                <option value="Nov">Nov</option>
+                                                <option value="Dec">Dec</option>
+                                            </select>
+                                            <select name="years" id="years">
+                                                <option value="2021">2021</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                            </select>
+                                        </div>
+                                        <div class="cards">
+                                            <img src="mc.png" alt="">
+                                            <img src="vi.png" alt="">
+                                            <img src="pp.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="fourth-row">
+                                <form action="/NewInvoice/" method="POST"> {% csrf_token %} <input type="submit"
+                                        value="Pay Now"> </form>
+                            </div>
+
+                            <div class="col-md-12">
+                                <p><b>Signature</b></p>
+                                <p><b>Date : <input type="datetime-local" name="dateTime" id="dateTime"> <br />
+                            </div>
+                        </div>
+
+
+                        <div>
+
+                            <!-- <div class="fourth-row">
+                                <a href="">Pay Now</a>
+                            </div> -->
+
+                            <!-- <div class="col-md-12">
+                                <p><b>Date :</b> 6 June 2019</p> <br />
+                                <p><b>Signature</b></p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

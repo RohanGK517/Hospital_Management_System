@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+
+
+{% block contents %}
+    <form action="." method="POST">{% csrf_token %}
+        <h1>Do you want to dismiss the patient "{{ pat.patient_name }}"?</h1>
+        <br>
+        <pre><p><input type="submit" value="Yes" />        
+        <a href="../">Cancel</a></p></pre>
+    </form>
+{% endblock %}

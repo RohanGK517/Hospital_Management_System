@@ -1,0 +1,104 @@
+{% extends "base.html"%}
+
+
+{% block contents %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col">Patient Id</th>
+        <th class="col">Patient Name</th>
+        <th class="col">Illness</th>
+        <th class="col">Doctor ID</th>
+        <th class="col">Doctor Name</th>
+        <th class="col">Status</th>
+        {% if not user.type_user is admins %}
+        <th class="col">Approve dismissal</th>
+        <th class="col">Generate Bills</th>
+        {%endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in pat %}
+      <tr>
+        <td class="row">{{forloop.counter}}</td>
+        <td><a href="{{ i.id }}/" style='text-decoration: none;'>{{i.patient_name}}</a></td>
+        <td>{{i.illness}}</td>
+        <td>{{forloop.counter}}</td>
+        <td>{{i.doctor_select}}</td>
+        <td>Admitted</td>
+       
+        {% if not user.type_user is admins%}
+        <td> <a href="{{ i.id }}/delete" style='text-decoration: none;'><input type="submit" value="Dismiss"></a></td>
+        <td> <a href="/generator"><input type="submit" value="Generate Bill"></a></td>
+        {%endif %}
+        
+        
+        
+      </tr>
+      {% endfor %}
+      <!-- <tr>
+        <th class="row">01-09-2021</th>
+        <td>14:01</td>
+        <td>Rajesh Sharma</td>
+        <td>Fever</td>
+        <td>1001</td>
+        <td>Samuel Miller</td>
+        <td>Admitted</td>
+      </tr>
+      <tr>
+        <th class="row">01-09-2021</th>
+        <td>14:15</td>
+        <td>Raju Yadav</td>
+        <td>Acne</td>
+        <td>1002</td>
+        <td>Jacob Thornton</td>
+        <td>Not Admitted</td>
+      </tr>
+      <tr>
+        <th class="row">01-09-2021</th>
+        <td>14:30</td>
+        <td>Shivam Rao</td>
+        <td>Tonsillitis</td>
+        <td>1003</td>
+        <td>Rajesh Verma</td>
+        <td>Not Admitted</td>
+      </tr>
+      <tr>
+        <th class="row">01-09-2021</th>
+        <td>14:01</td>
+        <td>Rajesh Sharma</td>
+        <td>Fever</td>
+        <td>1004</td>
+        <td>Samuel Miller</td>
+        <td>Admitted</td>
+      </tr>
+      <tr>
+        <th class="row">01-09-2021</th>
+        <td>14:15</td>
+        <td>Raju Yadav</td>
+        <td>Acne</td>
+        <td>1005</td>
+        <td>Jacob Thornton</td>
+        <td>Not Admitted</td>
+      </tr>
+      <tr>
+        <th class="row">01-09-2021</th>
+        <td>14:30</td>
+        <td>Shivam Rao</td>
+        <td>Tonsillitis</td>
+        <td>1006</td>
+        <td>Rajesh Verma</td>
+        <td>Not Admitted</td>
+      </tr>
+      <tr>
+        <th class="row">02-09-2021</th>
+        <td>14:30</td>
+        <td>{{name}}</td>
+        <td>Tonsillitis</td>
+        <td>1006</td>
+        <td>Rajesh perma</td>
+        <td> Admitted</td>
+      </tr> -->
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{% block contents %}
+
+    <div class="signup-box">
+        <form action="." method="post">{%csrf_token%}
+        <h1>User Registration</h1>
+        <div class="textbox">
+            <input type="text" name="username" id="username" placeholder="User Name" required>
+        </div>
+        <div class="textbox">
+            <select name="gender" id="gender">
+                <option value="">&nbsp; Choose your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="Other">Other</option>
+        </div>
+        
+        <div class="textbox">
+            <input type="tel" name="phone" id="phoneNumber" placeholder="Mobile No." required>
+        </div>
+        <div class="textbox">
+            <input type="email" name="email" id="email" placeholder="Email ID" required>
+        </div>
+        <div class="textbox">
+            <input type="password" name="Password" id="Password" placeholder="Password" required>
+        </div>
+        <div class="textbox">
+            <input type="password" name="ConfirmPassword" id="confirm_Password" placeholder="Confirm Password" required>
+        </div>
+       
+       
+        <input class="btn1" type="submit" name="" value="Submit">
+    </form>
+    </div>
+ {% endblock %}   

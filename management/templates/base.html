@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>HMS</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-area">
+                <img class="logo" src="{%static "logo.jpeg"  %}" alt="CT">
+                <li> <a id="1" href="/" style= "margin-left: 400px;">Home</a></li> 
+                <!-- <li><a id="2" href="#">Services</a></li> -->
+                <li> <a id="3" href="/#about">About</a></li>
+                <li> <a id="4" href="/#contact">Contact Us</a></li>
+                <!-- <li> <a id="4" href="#">login</a></li> -->
+            </ul>
+        </nav>
+        {% if user.is_authenticated %}
+        <a style='color:azure'>you are logged in as <h4>{{request.user}}</h4></a>
+        <a style='color:azure' href="/logout">Logout</a> 
+        {% else %}
+        <div class="auth">
+            <a class="btn" href="/userlogin">Login</a>
+            <a class="btn" href="/signup">Signup</a>
+        </div>
+        {% endif %}
+    </header>
+    <div class="content">
+        <!-- <h1>HII</h1> -->
+        {% block contents %}{% endblock %}
+    </div>
+    <div class="footer">
+        <div class="inner_footer">
+            <div class="logo_container">
+                <!-- <img src="icon.png" alt="CARE-TAKERS"> -->
+                <img src="{% static "icon.png" %}" alt="home" />
+            </div>
+            <div class="footer_third">
+                <h2>Need Help?</h2>
+                <a href="#">How to Register...</a>
+                <br>
+                <a href="#">Terms &amp Conditions</a>
+                <br>
+                <a href="#">Privacy Policy</a>
+
+            </div>
+            <div class="footer_third">
+                <h2>Contact Us</h2>
+                
+                <a href="#"><i  class="fa">&#xf0e0;</i> E-mail</a>
+                <br>
+                <a href="#"><i class="fa">&#xf095;</i> Mobile</a>
+                <br>
+                <a href="#"><i class="fa fa-whatsapp "></i> Whatsapp</a>
+            </div>
+            <div class="footer_third">
+                <h2>Follow Us</h2>
+                <ul><li><a href="https://www.facebook.com/profile.php?id=100072909567727"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/we2021CareTaker"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/we20211caretakers/"><i class="fa fa-instagram"></i></a></li>
+                <span>caretakers.com © <br>
+                All rights<br> reserved</span>
+            </ul>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

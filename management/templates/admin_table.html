@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+
+{% block contents %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col">Admin ID</th> 
+        <th class="col">Admin Name</th>
+        <th class="col">Hospital Name</th>
+        <th class="col">Hospital Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for h in hosp %}
+      <tr>
+        <td class="row">{{forloop.counter}}</td>
+        
+        <td><a href="{{ h.id }}/" style='text-decoration: none;'>{{h.admin_name}}</a></td>
+        <td>{{h.hospital_name}}</td>
+        <td>{{h.hospital_address}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

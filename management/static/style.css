@@ -1,0 +1,508 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    /* width: 100vh;
+    height: 100vh; */
+}
+/* html { overflow-y: scroll; }
+body { position: relative; } */
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:30px 50px;
+    position: relative;
+    background-color: rgb(18, 7, 37);
+    
+}
+
+.logo{
+    cursor:pointer;
+    width: 100px;
+    height: 100px;
+    position: center;
+    border-radius: 50%;
+}
+.logo:hover{
+    background: #000;
+    color:white;
+    border:2px solid #efefef;
+    border-radius: 30px;
+    padding : 9px;
+
+}
+.nav-area{
+   list-style: none;
+   margin-top: 0;
+   margin-bottom: 1rem;
+   padding-left: 3rem; 
+}
+.nav-area li{
+    display: inline-block;
+    padding:0 15px;
+    padding-top: 0px;
+    text-transform: uppercase;
+}
+.nav-area li a{
+    transition: .3s;
+    color:#fff;
+    text-decoration: none;
+
+}
+.nav-area li a:hover{
+    color:#d22938;
+}
+.auth{
+    float:right;
+   
+}
+.btn{
+    cursor:pointer;
+    color:#fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin:10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 5px solid #ffc400ec;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 24px;
+    transition:0.25px;
+    cursor:pointer; 
+    text-decoration: none;
+}
+.btn:hover{
+    background:#ffc400ec;
+  
+}
+#i1{
+    float:right;
+}
+
+
+/* for content */
+.content{
+    
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 20px 350px;
+}
+
+table {
+    box-shadow: 10px 5px 5px rgb(200, 200, 200);
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+td, th {
+    letter-spacing: 1.5px;
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    transition: color 1s, background-color 1s;
+}
+
+td:hover {
+    background-color: aqua;
+    color: blue;
+}
+
+tr {
+    background-color: #ffe8d6;
+}
+
+.col {
+    background-color: #a5a58d;
+    color: #fff;
+}
+
+.row {
+    background-color: #ddbea9;
+}
+
+
+/* for footer */
+.footer{
+    /* position: absolute; */
+    bottom: 0;
+    /* height: 250px; */
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;
+    background-color: rgb(150, 138, 171); 
+    clear: both;  
+    /* position: relative; */
+    
+    height: 300px;
+    margin-top: 30%; 
+    /* min-height: calc(100vh - 1000px); */
+
+}
+/* footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+} */
+.inner_footer{
+    display: block;
+    margin: 0 auto ;
+    width: 1000px;
+    height: 100%;
+}
+.inner_footer .logo_container{
+    width: 40%;
+    float: left;
+    height: 100%;
+    display: block;
+}
+.inner_footer .logo_container img{
+ border-radius: 50%;
+ width:10rem;
+
+}
+.inner_footer .footer_third{
+    width: calc(22%-15px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+
+}
+.inner_footer .footer_third h2{
+    color: wheat;
+    font-size: 29px;
+    margin-bottom: 18px;
+    margin-right: 25px;
+
+}
+.inner_footer .footer_third a{
+    color: wheat;
+    margin-right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.inner_footer .footer_third ul{
+   
+    list-style: none;
+}
+.inner_footer .footer_third span{
+    color: aliceblue;
+    font-size: 15px;
+}
+
+/* For sign_up */
+.outer {
+    display: inline-block;
+    width:970px;
+    height:350px;
+    /* background-color:grey; */
+    padding-top:20px;
+    padding-left:15px;
+    padding-right:15px;
+    align-items:center;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+}
+.inner1 {
+    padding:0px;
+    float:left;
+    width:300px;
+    height:320px;
+    background:linear-gradient(to bottom,white,blue); 
+    border:solid black;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 80px;
+    
+    
+}
+.inner2 {
+    float:left;
+    width:300px;
+    height:320px;
+    background:linear-gradient(to bottom,white,blue);  
+    border:solid black;
+    margin-left:20px;
+    margin-top: 80px;
+    border-radius: 30px;
+    text-align: center;
+}
+.inner3 {
+    float:right;
+    width:300px;
+    height:320px;
+    background:linear-gradient(to bottom,white,blue); 
+    border:solid black;
+    margin-top: 80px;
+    border-radius: 30px;
+    text-align: center;
+}
+.connect1{
+    border:0;
+    background-color: black;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 5px solid #ffc400ec;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25px;
+    cursor:pointer;
+    text-decoration: none;
+}
+.connect1:hover{
+        background:#ffc400ec;
+}
+.title {
+    color:green;
+}
+.connect:hover{
+    color:white;
+}
+
+
+/* For login */
+.box{
+  width:300px;
+  padding:30px;
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: rgba(0,0,0,4);
+  text-align:center;
+  border: 7px solid #9a9a9b;
+  border-radius: 27px;
+  margin-top: 80px;
+}
+.box h1{
+    color:white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box input[type="text"],.box input[type="password"]
+{
+    border:0;
+    background:none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #0367fd;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25px;
+}
+.box input[type="text"]:focus, .box input[type="password"]:focus
+{
+    width:240px ;
+    border-color:#ffc400ec;
+ 
+}
+.box input[type="submit"]{
+    border:0;
+    background:none;
+    display:block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #ffc400ec;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition:0.25px;
+    cursor:pointer;
+}
+.box input[type="submit"]:hover{
+    background:#ffc400ec;
+}
+
+
+
+/* For signup doctor,patient, admin  */
+.signup-box{
+    width: 280px;
+    position: relative;
+    height:10vh;
+    /* margin-top: 80px;
+    margin-bottom: 230px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(236, 233, 233);
+}
+.signup-box h1{
+    float: left;
+    font-size: 40px;
+    color:#0367fd;
+    border-bottom: 6px solid #4caf50;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #4caf50;
+}
+.textbox input
+{
+    border: none;
+    outline: none;
+    background: none;
+    color: black;;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+
+}
+#gender{
+    border: none;
+    outline: none;
+    background: rgb(164, 233, 85);
+    color: rgba(70, 2, 2, 0.425);
+    font-size: 18px;
+    width: 100%;
+    float: inline-start;
+    margin: 0px 0px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #4caf50;
+}
+.btn1{
+    width:100%;
+    background: none;
+    border: 2px solid #4caf50;
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    margin-top: 10%;
+    border-radius:20px;
+}
+.btn1:hover{
+    background-color:rgb(164, 233, 85);
+    color:white;
+}
+
+
+
+
+/* for contact us */
+.contact_container{
+    margin-left: 200px;
+    margin-right: 200px;
+    height:400px;
+    align-self: center;
+    border: 1in;
+    background-color: rgb(226, 213, 238);
+    border-radius: 10%;
+}
+
+
+
+
+
+/* patient_submit_form.html */
+.admit_container{
+     width: 100%;
+     background-color: rgb(243, 243, 243);
+     color: rgb(26, 26, 26);
+     padding: 15px 20px;
+     border: 2px solid gray;
+     border-radius: 50px;
+   }
+   
+   .admit_fname, .admit_lname, .admit_Illness, .admit_city, .admit_address, .admit_email, .admit_phn, .admit_dob, .admit_gender, .admit_pincode, .admit_doctor, .admit_password {
+     width:35%;
+     padding: 10px;
+     border: 3px solid #ccc;
+     border-radius: 5px;
+     margin: 6px;
+   }
+   .mm {
+       margin-left: 60px;
+   }
+   
+   
+    fieldset{
+     width: 100%;
+     overflow: hidden;
+     font-size: 30px;
+     padding: 8px 0;
+     margin: 8px 0;
+     border-radius: 20px;
+     border-bottom: 3px solid #4caf50;
+   } 
+   span input{
+     border: none;
+     outline: none;
+     background: none;
+     /* color: white; */
+     font-size: 18px;
+     width: 50%;
+     float: left;
+     margin: 0 2px;
+   }
+   .admit_gender, .admit_doctor
+   {
+     border: 1px solid white;
+     outline: none;
+     background: #4caf50;
+     /* color: rgba(255, 255, 255, 0.425); */
+     font-size: 18px;
+     width: 35%;
+     float: left;
+     /* margin-top: 10px;
+     margin-bottom: 8px; */
+     padding: 13px;
+   
+   }
+   .heading{
+     text-align: center; 
+     font-size: 40px;
+     width: 42%;
+     border-bottom: 3px solid #4caf50;
+     margin-bottom: 50px;
+     padding: 13px 0;    
+   }
+   .admit_submit{
+     font-size: large;
+     background-color: rgba(26, 180, 60, 0.877);
+     color: black;
+     padding:12px 20px;
+     border:none;
+     border-radius: 20px;
+     width: 15%;
+     margin-top: 2%;
+     margin-right: 25%;
+   }
+   
+   .admit_submit:hover{
+     background-color: rgb(201, 140, 48);
+     cursor: pointer;
+   
+   }
+
+
+
